@@ -37,7 +37,7 @@ class StartPage(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master)
         tk.Label(self, text="Photo editor").pack(side="top", fill="x", pady=20)
-        self.logo = Image.open('./img/ala-too_logo.jpeg')
+        self.logo = Image.open('./logo/ala-too_logo.jpeg')
         self.logo = ImageTk.PhotoImage(image=self.logo)
         tk.Label(self, image=self.logo).pack(pady=(0, 10))
         tk.Button(self, text="Crop image",
