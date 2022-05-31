@@ -149,8 +149,29 @@ class AboutCopy(tk.Frame):
         tk.Frame.__init__(self, master)
         tk.Label(self, text="Copyright").pack(side="top", pady=10)
 
+        text_box = Text(self, height=15, width=45)
+        text_box.pack(expand=True)
+        text_box.insert("end", self.copyright)
+
         tk.Button(self, text="Return to start page",
                   command=lambda: master.switch_frame(StartPage)).pack(side=tk.BOTTOM, pady=10)
+
+    @property
+    def copyright(self):
+        copyright_symbol = "\u00A9"
+
+        return f"""
+
+    This work is the intellectual property of the author. 
+
+    Permission is granted for this material 
+to be shared for non-commercial, educational 
+purposes, provided that this copyright 
+statement appears on the reproduced materials
+and notice is given hat the copying is by 
+permission of the author. 
+        
+                  {copyright_symbol} Emazov"""
 
 
 if __name__ == "__main__":
